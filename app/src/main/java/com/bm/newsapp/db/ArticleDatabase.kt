@@ -12,7 +12,7 @@ import com.bm.newsapp.models.Article
     entities = [Article::class], version = 1
 )
 
-@TypeConverters
+@TypeConverters(Converters::class)
 abstract class ArticleDatabase : RoomDatabase() {
     abstract fun getArticleDao(): ArticleDAO
 
